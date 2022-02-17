@@ -12,11 +12,11 @@ namespace PaymentAPI.Models
         {
             using (var servioceScope = app.ApplicationServices.CreateScope())
             {
-                SendData(servioceScope.ServiceProvider.GetService<PaymentDetailContext>());
+                SeedData(servioceScope.ServiceProvider.GetService<PaymentDetailContext>());
             }
         }
 
-        private static void SendData(PaymentDetailContext context)
+        private static void SeedData(PaymentDetailContext context)
         {
             Console.WriteLine("Appling Migration...");
             context.Database.Migrate();
