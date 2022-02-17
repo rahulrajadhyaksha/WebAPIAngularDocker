@@ -9,7 +9,7 @@ export class PaymentDetailService {
 
   constructor(private http: HttpClient) { }
 
-  readonly baseURL = 'http://localhost:61236/api/PaymentDetail'
+  readonly baseURL = 'http://localhost:4040/api/PaymentDetail'
   formData: PaymentDetail = new PaymentDetail();
   list: PaymentDetail[];
 
